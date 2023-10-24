@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore selected files extension:
+*.html
+*.js
+*.tsx
+*.vue
