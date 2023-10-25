@@ -9,7 +9,7 @@
           class="aspect-[16/9] rounded-[20px]"
         > 
       </div>
-      <div class="absolute left-[50%] top-20 md:top-36 -translate-y-1/2 -translate-x-1/2 flex flex-col text-center space-y-3">
+      <div class="absolute left-[50%] top-20 md:top-36 -translate-y-1/2 -translate-x-1/2 flex flex-col text-center space-y-3 z-10">
         <p class="text-xs md:text-base font-light text-white">
           All you need is Trivenly
         </p>
@@ -42,7 +42,7 @@
       class="flex items-center w-[75%] absolute -bottom-[320px] md:-bottom-[220px] lg:-bottom-20 text-black shadow-xl z-10 px-[50px] py-10"
     >
       <div class="w-full grid grid-cols-12 gap-y-3 gap-x-[15px]">
-        <div class="col-span-12 lg:col-span-5">
+        <div class="col-span-12 lg:col-span-4">
           <FormTextField 
             label="Choose your destination"
             placeholder="Where you want to go?"
@@ -60,11 +60,15 @@
             placeholder="Kamu mau jalan kemana?"
           />
         </div>
-        <div class="col-span-12 lg:col-span-1">
+        <div class="col-span-12 lg:col-span-2">
           <MiscButton 
             text="Search"
-            class="w-full mt-5 h-[45px]"
-          />
+            class="w-full mt-5 h-[45px] !rounded-xl"
+          >
+            <template #iconButtonPrepend>
+              <SvgFinder />
+            </template>
+          </MiscButton>
         </div>
       </div>
     </MiscCardBase>

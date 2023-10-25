@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto flex flex-col px-10 lg:px-28 mt-[120px]">
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col md:items-center">
       <p class="text-sm text-black">
         UDAH MAIN KE SINI BELUM?
       </p>

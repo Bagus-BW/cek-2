@@ -10,14 +10,18 @@
     @click.prevent="$emit('clickHandle')"
   >
     <span
-      class="text-md capitalize font-semibold"
+      class="flex gap-x-2 text-md capitalize font-semibold"
       :style="textVars"
     >
       <slot
-        v-if="$slots.iconButton"
-        name="iconButton"
+        v-if="$slots.iconButtonPrepend"
+        name="iconButtonPrepend"
       />
       {{ text }}
+      <slot
+        v-if="$slots.iconButtonAppend"
+        name="iconButtonAppend"
+      />
     </span>
   </button>
 </template>

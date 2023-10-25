@@ -93,7 +93,7 @@
                   }"
                 >
                   <h1 class="text-3xl font-bold mt-5">
-                    Bintang Asyura {{ slideActiveIndex }} {{ index - 1 }}
+                    Bintang Asyura
                   </h1>
                   <p class="text-lg font-light text-center">
                     Trivenly makes it easy for me to go on vacation with my family. It's very easy to use, this is what makes me like it more than others. What a good experience! I think i will use it again for my next vacation. Thx!

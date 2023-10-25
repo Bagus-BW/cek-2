@@ -7,17 +7,43 @@
         loading="lazy"
         class="aspect-square w-full md:w-[245px] rounded-[20px]"
       >
+      <!-- Like Action -->
+      <button class="absolute top-3 right-3 bg-white p-2 rounded-full">
+        <SvgLove />
+      </button>
+      <!-- Rate Information -->
+      <div class="absolute bottom-3 right-3 bg-white rounded-full">
+        <div class="flex items-center py-1 px-2">
+          <div class="flex gap-x-1">
+            <img
+              src="/img/logo/branding.png"
+              alt="branding"
+              class="w-[20px]"
+            >
+            <p class="text-black">
+              Trivus
+            </p>
+          </div>
+          <span class="w-1 h-1 rounded-full bg-black mx-2" />
+          <div class="flex items-center gap-x-1">
+            <SvgStar />
+            <p class="text-black font-light">
+              4.9
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="flex flex-col">
       <h1 class="text-xl font-medium text-black">
         Open Trip Labuan Bajo
       </h1>
       <div class="flex gap-x-1">
-        <div class="border py-1 px-2 rounded-full">
-          Lampung
+        <div class="flex items-center gap-x-1 border py-1 px-2 rounded-full">
+          <SvgMaps /> Lampung
         </div>
-        <div class="border py-1 px-2 rounded-full">
-          3D + 2M
+        <div class="flex items-center gap-x-1 border py-1 px-2 rounded-full">
+          <SvgCLock /> 3D + 2M
         </div>
       </div>
     </div>
