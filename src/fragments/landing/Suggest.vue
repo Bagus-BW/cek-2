@@ -5,7 +5,7 @@
         <p class="text-sm">
           BINGUNG NIH...
         </p>
-        <h1 class="text-4xl lg:text-6xl font-extrabold text-black leading-[1.2]">
+        <h1 class="text-4xl lg:text-6xl font-extrabold text-black !leading-tight">
           Mau jalan tapi ga tau kemana? coba tombol ajaib di bawah! 👇
         </h1>
       </div>
