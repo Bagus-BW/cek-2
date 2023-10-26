@@ -2,10 +2,10 @@
   <div class="container flex flex-col mt-[120px] mx-auto px-10 lg:px-28">
     <div class="flex items-center justify-between">
       <div class="flex flex-col">
-        <p class="text-sm text-black">
+        <p class="text-xs md:text-sm text-black">
           KATEGORI
         </p>
-        <h1 class="text-3xl font-bold text-black leading-normal">
+        <h1 class="text-xl md:text-3xl font-bold text-black leading-normal">
           Kamu suka yang mana?
         </h1>
       </div>

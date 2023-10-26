@@ -38,7 +38,7 @@
       <h1 class="text-xl font-medium text-black">
         Open Trip Labuan Bajo
       </h1>
-      <div class="flex gap-x-1">
+      <div class="flex gap-x-1 mt-2">
         <div class="flex items-center gap-x-1 border py-1 px-2 rounded-full">
           <SvgMaps /> Lampung
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="container relative flex flex-col items-center mt-[60px] mx-auto px-10 lg:px-28">
     <div class="relative">
-      <div class="img-background-ovelay">
+      <div class="hidden md:block img-background-ovelay">
         <img
           src="https://images.unsplash.com/photo-1423245617392-005724ca6338?auto=format&fit=crop&q=80&w=3001&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="jumbotron"
@@ -39,7 +39,7 @@
     </div>
     <!-- Absolute placement filtering destination -->
     <MiscCardBase
-      class="flex items-center w-[75%] absolute -bottom-[320px] md:-bottom-[220px] lg:-bottom-20 text-black shadow-xl z-10 px-[50px] py-10"
+      class="flex items-center w-[75%] absolute -bottom-[320px] md:-bottom-[220px] lg:-bottom-20 text-black shadow-xl z-10 px-10 md:px-[50px] py-10"
     >
       <div class="w-full grid grid-cols-12 gap-y-3 gap-x-[15px]">
         <div class="col-span-12 lg:col-span-4">

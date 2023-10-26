@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto flex flex-col px-10 lg:px-28 mt-[120px]">
     <div class="flex flex-col md:items-center">
-      <p class="text-sm text-black">
+      <p class="text-xs md:text-sm text-black">
         UDAH MAIN KE SINI BELUM?
       </p>
-      <h1 class="text-4xl font-bold text-black">
+      <h1 class="text-2xl md:text-4xl font-bold text-black">
         Destinasi Yang Lagi Hype
       </h1>
     </div>

@@ -2,10 +2,10 @@
   <div class="flex flex-col">
     <div class="flex justify-between items-center">
       <div class="flex flex-col">
-        <p class="text-sm text-black">
+        <p class="text-xs md:text-sm text-black">
           {{ title }}
         </p>
-        <h1 class="text-3xl font-bold text-black leading-normal">
+        <h1 class="text-xl md:text-3xl font-bold text-black leading-normal">
           {{ subTitle }}
         </h1>
       </div>
