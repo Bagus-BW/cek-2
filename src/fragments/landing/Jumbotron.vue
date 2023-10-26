@@ -1,7 +1,7 @@
 <template>
   <div class="container relative flex flex-col items-center mt-[60px] mx-auto px-10 lg:px-28">
     <div class="relative">
-      <div class="hidden md:block img-background-ovelay">
+      <div class="img-background-ovelay">
         <img
           src="https://images.unsplash.com/photo-1423245617392-005724ca6338?auto=format&fit=crop&q=80&w=3001&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="jumbotron"
@@ -9,11 +9,11 @@
           class="aspect-[16/9] rounded-[20px]"
         > 
       </div>
-      <div class="absolute left-[50%] top-20 md:top-36 -translate-y-1/2 -translate-x-1/2 flex flex-col text-center space-y-3 z-10">
+      <div class="absolute left-[50%] top-20 md:top-36 lg:top-44 -translate-y-1/2 -translate-x-1/2 flex flex-col text-center space-y-3 md:space-y-5 z-10">
         <p class="text-xs md:text-base font-light text-white">
           All you need is Trivenly
         </p>
-        <h1 class="text-base md:text-4xl font-extrabold text-white">
+        <h1 class="text-sm md:text-3xl lg:text-4xl font-extrabold text-white">
           Just enjoy it! We take care everything for your trip.
         </h1>
         <div class=" flex items-center justify-center">
@@ -32,7 +32,7 @@
                 fill="white"
               />
             </svg>
-            <span class="text-white">Lake Bled, Slovenia</span>
+            <span class="text-sm md:text-base text-white">Lake Bled, Slovenia</span>
           </div>
         </div>
       </div>
