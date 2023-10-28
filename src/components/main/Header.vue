@@ -1,7 +1,10 @@
 <template>
   <div class="sticky top-0 bg-white py-6 shadow z-40">
     <div class="relative container flex justify-between items-center mx-auto px-10 lg:px-28">
-      <button class="md:hidden" @click="showMenuMobile = !showMenuMobile">
+      <button
+        class="md:hidden"
+        @click="showMenuMobile = !showMenuMobile"
+      >
         <img
           src="/img/icons/hamburger.png"
           alt="icon-user"
@@ -34,6 +37,7 @@
 
       <!-- Another Menu -->
       <button 
+        v-click-outside="() => showMenuDropDown = false"
         class="flex items-center border gap-x-3 rounded-full px-3 py-2"
         @click="showMenuDropDown = !showMenuDropDown"
       >
