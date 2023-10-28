@@ -2,13 +2,13 @@
   <div class="absolute top-16 right-10 lg:right-28 w-[250px] border bg-white rounded-[20px]">
     <div class="flex flex-col">
       <routerLink
-        to=""
+        to="/register"
         class="px-6 py-3 cursor-pointer dynamic-hover rounded-t-[20px]"
       >
         Daftar
       </routerLink>
       <routerLink
-        to=""
+        to="/login"
         class="px-6 py-3 cursor-pointer dynamic-hover"
       >
         Masuk
