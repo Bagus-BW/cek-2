@@ -25,9 +25,15 @@ dist-ssr
 *.sw?
 
 .env
+.cert
+env-dev
+env-prod
 
 # package manager
 .yarn
 yarn.lock
 yarn-error.log
 package-lock.json
+pnpm-lock.yaml
+.yarnrc.yml
+coverage
