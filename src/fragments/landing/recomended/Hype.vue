@@ -8,7 +8,7 @@
         Destinasi Yang Lagi Hype
       </h1>
     </div>
-    <div class="relative mt-10">
+    <routerLink to="" class="relative mt-10">
       <swiper-container
         ref="swiperEl"
         slides-per-view="1"
@@ -91,7 +91,7 @@
           />
         </svg>
       </button>
-    </div>
+    </routerLink>
   </div>
 </template>
   <script>
