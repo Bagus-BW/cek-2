@@ -1,7 +1,9 @@
 <template>
   <div class="min-h-screen w-screen bg-[#F6F6F6]">
     <MainHeader />
-    <router-view />
+    <div class="min-h-[calc(100vh-359.5px)]">
+      <router-view />
+    </div>
     <MainFooter />
   </div>
 </template>
