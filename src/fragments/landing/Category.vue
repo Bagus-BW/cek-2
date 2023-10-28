@@ -57,7 +57,7 @@
           </button>
         </div>
       </div>
-      <div class="mt-8">
+      <routerLink to="" class="mt-8">
         <swiper-container
           ref="swiperEl"
           slides-per-view="auto"
@@ -83,7 +83,7 @@
             </MiscCardBase>
           </swiper-slide>
         </swiper-container>
-      </div>
+      </routerLink>
     </div>
   </div>
 </template>
