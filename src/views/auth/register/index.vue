@@ -118,14 +118,26 @@
               </p>
             </div>
             <MiscButton 
-              text="Masuk"
+              text="Daftar"
               class="w-full mt-5 h-[45px] !rounded-xl"
               :disabled="!meta.valid"
             />
           </VeeForm>
           <p class="text-sm text-[#636363] text-center mt-5">
             Dengan mendaftar, saya menyetujui 
-            <span class="text-[#1127E3]">Syarat dan Ketentuan</span> serta <span class="text-[#1127E3]">Kebijakan Privasi</span>
+            <routerLink
+              to="/term-condition"
+              target="_blank"
+              class="text-[#1127E3]"
+            >
+              Syarat dan Ketentuan
+            </routerLink> serta <routerLink
+              to="/privacy-policy"
+              target="_blank"
+              class="text-[#1127E3]"
+            >
+              Kebijakan Privasi
+            </routerLink>
           </p>
         </div>
       </MiscCardBase>
