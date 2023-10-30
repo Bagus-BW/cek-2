@@ -2,10 +2,10 @@
   <div class="flex flex-col">
     <div class="flex justify-between items-center">
       <div class="flex flex-col">
-        <p class="text-xs md:text-sm text-black">
+        <p v-if="title" class="text-xs md:text-sm text-black">
           {{ title }}
         </p>
-        <h1 class="text-xl md:text-3xl font-bold text-black leading-normal">
+        <h1 v-if="subTitle" class="text-xl md:text-3xl font-bold text-black leading-normal">
           {{ subTitle }}
         </h1>
       </div>
@@ -50,11 +50,11 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Lorem'
+      default: ''
     },
     subTitle: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet.'
+      default: ''
     }
   }
 }
