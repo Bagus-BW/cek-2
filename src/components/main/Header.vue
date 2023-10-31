@@ -1,6 +1,6 @@
 <template>
   <div class="sticky top-0 bg-white py-6 shadow z-40">
-    <div class="relative container flex justify-between items-center mx-auto px-10 lg:px-28">
+    <div class="relative container flex justify-between items-center mx-auto px-10 lg:px-20">
       <button
         class="md:hidden"
         @click="showMenuMobile = !showMenuMobile"
