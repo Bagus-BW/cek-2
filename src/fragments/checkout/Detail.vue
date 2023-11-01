@@ -101,6 +101,7 @@
               <MiscButton
                 text="Lanjut"
                 class="mt-5 !rounded-xl"
+                @click-handle="() => $store.checkout.setCurrentStep(2)"
               />
             </div>
           </div>

@@ -188,6 +188,7 @@
               <MiscButton
                 text="Bayar"
                 class="mt-5 !rounded-xl"
+                @click-handle="() => $store.checkout.setCurrentStep(3)"
               />
             </div>
           </div>
