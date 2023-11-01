@@ -12,15 +12,33 @@
           class="w-5"
         >
       </button>
-      <!-- logo -->
-      <img
-        src="/img/logo/trivenly.png"
-        alt="logo"
-        class="w-[138px]"
-      >
+      <div class="flex items-center gap-x-5">
+        <!-- Back Button -->
+        <button
+          v-if="$route.name === 'checkout'"
+          class="flex bg-[#FAFAFA] py-2 px-3 rounded-full"
+          @click="getCurrentStep === 1 ? $router.go(-1) : $store.checkout.setCurrentStep(getCurrentStep - 1)"
+        >
+          <div class="flex items-center gap-2">
+            <span class="rotate-180 bg-[#ECECEC] p-2 rounded-full">
+              <SvgArrow color="#636363" />
+            </span>
+            <p>Back</p>
+          </div>
+        </button>
+        <!-- logo -->
+        <img
+          src="/img/logo/trivenly.png"
+          alt="logo"
+          class="w-[138px]"
+        >
+      </div>
 
       <!-- Menu -->
-      <ul class="hidden md:flex gap-x-5">
+      <ul
+        v-if="$route.name !== 'checkout'"
+        class="hidden md:flex gap-x-5"
+      >
         <li>
           <a href="">Marketplace</a>
         </li>
@@ -35,8 +53,75 @@
         </li>
       </ul>
 
-      <!-- Another Menu -->
+      <!-- Form Step -->
+      <div
+        v-if="$route.name === 'checkout'"
+        class="flex items-center gap-x-3"
+      >
+        <div class="flex items-center gap-x-2">
+          <p 
+            class="flex items-center justify-center text-sm rounded-full w-9 h-9"
+            :class="{
+              'text-[#1127E3] border border-[#1127E3]': getCurrentStep === 1,
+              'bg-[#1127E3]': getCurrentStep > 1
+            }"
+          >
+            <span v-if="getCurrentStep === 1">1</span>
+            <span v-else><SvgCheck /></span> 
+          </p>
+          <p class="text-sm text-[#1127E3]">
+            Detail
+          </p>
+        </div>
+        <div 
+          class="h-[0.5px] w-[50px]" 
+          :class="{
+            'bg-[#ECECEC]': getCurrentStep === 1,
+            'bg-[#1127E3]': getCurrentStep > 1
+          }"
+        />
+        <div class="flex items-center gap-x-2">
+          <p 
+            class="flex items-center justify-center text-sm rounded-full w-9 h-9"
+            :class="{
+              'text-[#7F7F7F] bg-[#ECECEC]': getCurrentStep < 2,
+              'text-[#1127E3] border border-[#1127E3]': getCurrentStep === 2,
+              'bg-[#1127E3]': getCurrentStep > 2
+            }"
+          >
+            <span v-if="getCurrentStep < 2 || getCurrentStep === 2">2</span>
+            <span v-else><SvgCheck /></span>
+          </p>
+          <p class="text-sm text-[#7F7F7F]">
+            Pembayaran
+          </p>
+        </div>
+        <div 
+          class="h-[0.5px] w-[50px]" 
+          :class="{
+            'bg-[#ECECEC]': getCurrentStep === 2,
+            'bg-[#1127E3]': getCurrentStep > 2
+          }"
+        />
+        <div class="flex items-center gap-x-2">
+          <p 
+            class="flex items-center justify-center text-sm rounded-full w-9 h-9"
+            :class="{
+              'text-[#7F7F7F] bg-[#ECECEC]': getCurrentStep < 3,
+              'text-[#1127E3] border border-[#1127E3]': getCurrentStep === getTotalStep,
+            }"
+          >
+            3
+          </p>
+          <p class="text-sm text-[#7F7F7F]">
+            Tiket
+          </p>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu -->
       <button 
+        v-if="$route.name !== 'checkout'"
         v-click-outside="() => showMenuDropDown = false"
         class="flex items-center border gap-x-3 rounded-full px-3 py-2"
         @click="showMenuDropDown = !showMenuDropDown"
@@ -71,6 +156,14 @@ export default {
       showMenuMobile: false
     }
   },
+  computed: {
+    getCurrentStep() {
+      return this.$store.checkout.getCurrentStep
+    },
+    getTotalStep() {
+      return this.$store.checkout.getTotalStep
+    }
+  }
 }
 </script>
 <style>
