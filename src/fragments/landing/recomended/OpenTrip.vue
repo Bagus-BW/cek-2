@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-10 lg:px-28 mt-[60px]">
+  <div class="container mx-auto px-5 lg:px-20 mt-[60px]">
     <MiscCardRecomended
       title="Rekomendasi"
       sub-title="Paket Open Trip"
@@ -20,6 +20,3 @@
       
   }
   </script>
-  <style>
-      
-  </style>

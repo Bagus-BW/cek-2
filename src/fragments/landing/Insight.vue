@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-[120px] px-10 lg:px-28">
+  <div class="container mx-auto mt-[120px] px-5 lg:px-20">
     <MiscCardRecomended
       title="INSIGHTS"
       sub-title="Udah tahu soal ini belum?"
@@ -66,6 +66,3 @@ export default {
     
 }
 </script>
-<style>
-    
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto flex flex-col px-10 lg:px-28 mt-[120px]">
+  <div class="container mx-auto flex flex-col px-5 lg:px-20 mt-[120px]">
     <div class="flex flex-col md:items-center">
       <p class="text-xs md:text-sm text-black">
         UDAH MAIN KE SINI BELUM?
@@ -8,7 +8,10 @@
         Destinasi Yang Lagi Hype
       </h1>
     </div>
-    <routerLink to="" class="relative mt-10">
+    <routerLink
+      to=""
+      class="relative mt-10"
+    >
       <swiper-container
         ref="swiperEl"
         slides-per-view="1"
@@ -34,7 +37,7 @@
             <img
               src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="thumbnail"
-              class=" aspect-square object-cover w-[370px] rounded-2xl"
+              class="aspect-square object-cover w-full md:w-[370px] rounded-2xl"
             >
             <div class="absolute bottom-5 left-5 flex flex-col z-10">
               <h1 class="text-[27px] text-white">

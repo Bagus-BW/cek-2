@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-10 lg:px-20 mt-10 mb-20">
+  <div class="container mx-auto px-5 lg:px-20 mt-10 mb-20">
     <StepDetailOrder 
       class="ransition duration-300"
       :class="{

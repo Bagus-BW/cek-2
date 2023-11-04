@@ -1,5 +1,5 @@
 <template>
-  <div class="container relative flex flex-col items-center mt-[60px] mx-auto px-10 lg:px-28">
+  <div class="container relative flex flex-col items-center mt-[30px] mx-auto px-5 lg:px-20">
     <div class="relative">
       <div class="img-background-ovelay">
         <img

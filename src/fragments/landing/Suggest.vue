@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto my-[120px] px-10 lg:px-28">
+  <div class="container mx-auto my-[120px] px-5 lg:px-20">
     <div class="grid grid-cols-12">
       <div class="col-span-12 md:col-span-7">
         <p class="text-sm">
@@ -77,6 +77,3 @@ export default {
     
 }
 </script>
-<style>
-    
-</style>

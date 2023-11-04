@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white py-6">
-    <div class="container flex flex-col lg:flex-row justify-between items-center gap-y-5 lg:gap-y-0 mx-auto px-10 lg:px-28">
+    <div class="container flex flex-col lg:flex-row justify-between items-center gap-y-5 lg:gap-y-0 mx-auto px-5 lg:px-20">
       <h1 class="text-3xl font-bold text-black">
         Cari paket perjalanan
       </h1>

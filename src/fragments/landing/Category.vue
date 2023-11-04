@@ -1,6 +1,6 @@
 <template>
   <div class="relative flex flex-col h-[250px] mt-[400px] md:mt-[300px] lg:mt-[200px] overflow-hidden">
-    <div class="container mx-auto flex flex-col px-10 lg:px-28">
+    <div class="container mx-auto flex flex-col px-5 lg:px-20">
       <div class="flex items-center justify-between">
         <div class="flex flex-col">
           <p class="text-xs md:text-sm text-black">
@@ -91,6 +91,3 @@
 export default {
 }
 </script>
-<style>
-    
-</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-black p-10">
-    <div class="container mx-auto grid grid-cols-12 items-center gap-y-10 px-10 lg:px-28">
+    <div class="container mx-auto grid grid-cols-12 items-center gap-y-10 px-5 lg:px-28">
       <div class="col-span-12 lg:col-span-2 flex flex-col gap-y-2">
         <span class="text-4xl font-extrabold text-white">Trivenly.</span>
         <div class="flex gap-x-5">

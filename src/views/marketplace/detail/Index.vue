@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-10 lg:px-28 mt-10">
+  <div class="container mx-auto px-5 lg:px-20 mt-10">
     <!-- Breadcrumb -->
     <div class="flex">
       <p class="text-base text-[#636363]">Marketpalce</p>

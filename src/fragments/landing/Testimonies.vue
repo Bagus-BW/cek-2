@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col mt-[120px] mx-auto px-10 lg:px-28">
+  <div class="container flex flex-col mt-[120px] mx-auto px-5 lg:px-20">
     <div class="flex items-center justify-between">
       <div class="flex flex-col">
         <p class="text-xs md:text-sm text-black">
@@ -174,6 +174,3 @@ export default {
   }
 }
 </script>
-<style>
-    
-</style>
