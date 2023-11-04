@@ -3,21 +3,21 @@
     <div class="col-span-12 lg:col-span-8 order-2 lg:order-1">
       <MiscCardBase class="!rounded-[20px]">
         <div class="flex flex-col">
-          <div class="flex justify-between p-10">
-            <h1 class="text-3xl font-bold text-black">
+          <div class="flex justify-between gap-x-5 md:gap-x-0 p-10">
+            <h1 class="text-xl md:text-3xl font-bold text-black">
               Paket trip Pahawang 5D+4N
             </h1>
-            <div class="flex items-center">
+            <div class="flex flex-col md:flex-row justify-center items-center">
               <img
                 src="/img/logo/branding.png"
                 alt="provider"
                 class="w-10"
               >
-              <div class="flex items-center gap-x-2">
-                <p class=" text-base font-medium ml-2">
+              <div class="flex flex-col md:flex-row items-center gap-x-2">
+                <p class=" text-base font-medium md:ml-2">
                   Trivus
                 </p>
-                <span class="text-4xl">·</span>
+                <span class="hidden md:block text-4xl">·</span>
                 <div class="flex items-center gap-x-1">
                   <SvgStar />
                   <p class="text-base font-light">
@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="border-t border-b">
-            <div class="flex gap-x-5 px-10 py-4">
+            <div class="flex flex-wrap gap-5 px-10 py-4">
               <p class="text-base font-medium text-[#494949]">
                 Detail
               </p>
