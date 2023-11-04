@@ -27,8 +27,8 @@
             :key="idx"
             class="flex flex-col"
           >
-            <div class="flex items-center gap-x-3">
-              <div class="bg-[#1127E3] px-3 py-2 rounded-full">
+            <div class="flex flex-col md:flex-row md:items-center gap-x-3">
+              <div class="w-fit bg-[#1127E3] px-3 py-2 rounded-full">
                 <p class="text-xs text-white">
                   {{ item.title }}
                 </p>
