@@ -27,11 +27,13 @@
           </div>
         </button>
         <!-- logo -->
-        <img
-          src="/img/logo/trivenly.png"
-          alt="logo"
-          class="w-[138px]"
-        >
+        <router-link to="/">
+          <img
+            src="/img/logo/trivenly.png"
+            alt="logo"
+            class="w-[138px]"
+          >
+        </router-link>
       </div>
 
       <!-- Menu -->
@@ -40,16 +42,16 @@
         class="hidden md:flex gap-x-5"
       >
         <li>
-          <a href="">Marketplace</a>
+          <routerLink to="/marketplace">Marketplace</routerLink>
         </li>
         <li>
-          <a href="">Discover</a>
+          <routerLink to="/">Discover</routerLink>
         </li>
         <li>
-          <a href="">Travel agency</a>
+          <routerLink to="/">Travel agency</routerLink>
         </li>
         <li>
-          <a href="">Pick for me</a>
+          <routerLink to="/">Pick for me</routerLink>
         </li>
       </ul>
 
