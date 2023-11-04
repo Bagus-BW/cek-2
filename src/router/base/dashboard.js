@@ -25,4 +25,36 @@ export default [
       layout: DashboardLayout
     }
   },
+  {
+    path: '/dashboard/traveler',
+    name: 'dashboard.traveler',
+    component: () => import('@/views/dashboard/traveler/detail/Index.vue'),
+    meta: {
+      layout: DashboardLayout
+    }
+  },
+  {
+    path: '/dashboard/traveler/create',
+    name: 'dashboard.traveler.create',
+    component: () => import('@/views/dashboard/traveler/manage/Create.vue'),
+    meta: {
+      layout: DashboardLayout
+    }
+  },
+  {
+    path: '/dashboard/traveler/Edit/:id',
+    name: 'dashboard.traveler.edit',
+    component: () => import('@/views/dashboard/traveler/manage/Edit.vue'),
+    meta: {
+      layout: DashboardLayout
+    }
+  },
+  {
+    path: '/dashboard/profile',
+    name: 'dashboard.profile',
+    component: () => import('@/views/dashboard/profile/Index.vue'),
+    meta: {
+      layout: DashboardLayout
+    }
+  },
 ]

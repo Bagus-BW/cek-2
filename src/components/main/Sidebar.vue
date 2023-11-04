@@ -35,16 +35,17 @@
           :key="idy"
         >
           <button
+            v-if="menu.show !== false"
             class="w-full flex items-center gap-x-2 text-base text-[#636363] hover:bg-[rgba(17,39,227,0.2)] hover:text-[#1127E3] p-4 my-2 rounded-xl"
-            :class="{'!text-[#1127E3] bg-[rgba(17,39,227,0.2)]': $route.path === menu.link}"
+            :class="{'!text-[#1127E3] bg-[rgba(17,39,227,0.2)]': $route.name.split('.')[1] === menu.slug}"
             @click="handleChangeMenu(item.group, menu.link)"
           >
             <img
-              :src="$route.path === menu.link ? menu.iconActive : menu.icon"
+              :src="$route.name.split('.')[1] === menu.slug ? menu.iconActive : menu.icon"
               alt="sidebar-icon"
               loading="lazy"
             >
-            <span class="block md:hidden lg:block">{{ menu.name }}</span>
+            <span class="block md:hidden lg:block">{{ menu.name }} </span>
           </button>
         </li>
         <div 
@@ -80,6 +81,7 @@ export default {
           items: [
             {
               name: 'Tiket Saya',
+              slug: 'my-tickets',
               icon: '/img/icons/sidebar-ticket.svg',
               iconActive: '/img/icons/sidebar-ticket-active.svg',
               link: '/dashboard/my-tickets',
@@ -87,6 +89,7 @@ export default {
             },
             {
               name: 'Riwayat Transaksi',
+              slug: 'transactions',
               icon: '/img/icons/sidebar-history.svg',
               iconActive: '/img/icons/sidebar-history-active.svg',
               link: '/dashboard/transactions',
@@ -94,6 +97,7 @@ export default {
             },
             {
               name: 'Whislist',
+              slug: 'wishlist',
               icon: '/img/icons/sidebar-wishlist.svg',
               iconActive: '/img/icons/sidebar-wishlist-active.svg',
               link: '/dashboard/wishlist',
@@ -106,13 +110,33 @@ export default {
           items: [
             {
               name: 'Detail Profile Pemesan',
+              slug: 'traveler',
               icon: '/img/icons/sidebar-traveler.svg',
               iconActive: '/img/icons/sidebar-traveler-active.svg',
-              link: '/dashboard/traveler-profile',
+              link: '/dashboard/traveler',
               access: ['user']
             },
             {
+              show: false,
+              name: 'Detail Profile Pemesan',
+              slug: 'traveler',
+              icon: '/img/icons/sidebar-traveler.svg',
+              iconActive: '/img/icons/sidebar-traveler-active.svg',
+              link: '/dashboard/traveler/create',
+              access: ['user']
+            },
+            {
+              show: false,
+              name: 'Detail Profile Pemesan',
+              slug: 'traveler',
+              icon: '/img/icons/sidebar-traveler.svg',
+              iconActive: '/img/icons/sidebar-traveler-active.svg',
+              link: '/dashboard/traveler/edit',
+              access: ['user'],
+            },
+            {
               name: 'Informasi Akun',
+              slug: 'profile',
               icon: '/img/icons/sidebar-profile.svg',
               iconActive: '/img/icons/sidebar-profile-active.svg',
               link: '/dashboard/profile',
