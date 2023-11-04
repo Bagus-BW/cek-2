@@ -1,47 +1,79 @@
 <template>
-  <MiscCardBase class="relative h-full p-5">
-    <ul
-      v-for="(item, idx) in menus"
-      :key="idx"
-    >
-      <li
-        v-for="(menu, idy) in menus[idx].items"
-        :key="idy"
-      >
-        <router-link
-          :to="menu.link"
-          class="flex items-center gap-x-2 text-base text-[#636363] hover:bg-[rgba(17,39,227,0.2)] hover:text-[#1127E3] p-4 my-2 rounded-xl"
-          :class="{'!text-[#1127E3] bg-[rgba(17,39,227,0.2)]': $route.path === menu.link}"
+  <MiscCardBase class="relative h-fit md:h-[calc(100vh-239.5px)] p-5">
+    <div class="md:hidden flex justify-between items-center">
+      <div class="flex items-center gap-x-2 mx-4">
+        <img
+          :src="CheckActiveMenu.icon"
+          alt="icon"
         >
-          <img
-            :src="$route.path === menu.link ? menu.iconActive : menu.icon"
-            alt="sidebar-icon"
-            loading="lazy"
-          >
-          <span class="hidden lg:block">{{ menu.name }}</span>
-        </router-link>
-      </li>
-      <div 
-        class="h-[0.5px] w-full bg-[#ECECEC]" 
-        :class="{
-          'my-3': idx !== menus.length - 1
-        }"
-      />
-    </ul>
-    
-    <button class="absolute bottom-5 flex gap-x-2 p-4 text-base text-[#FF4014]">
-      <img
-        src="/img/icons/sidebar-logout.svg"
-        alt="logout-icon"
+        <p>{{ CheckActiveMenu.name }}</p>
+      </div>
+      <button 
+        class="flex gap-x-2 p-4 text-base text-[#FF4014]"
+        @click="showMenu = !showMenu"
       >
-      <span class="hidden lg:block">Logout</span>
-    </button>
+        <img
+          src="/img/icons/hamburger.png"
+          alt="icon-user"
+          loading="lazy"
+          class="w-5"
+        >
+      </button>
+    </div>
+    <div
+      :class="{
+        'slideZoomOut': !showMenu && $store.root.isMobile,
+        'slideZoomIn': showMenu && $store.root.isMobile
+      }"
+    >
+      <ul
+        v-for="(item, idx) in menus"
+        :key="idx"
+      >
+        <li
+          v-for="(menu, idy) in menus[idx].items"
+          :key="idy"
+        >
+          <button
+            class="w-full flex items-center gap-x-2 text-base text-[#636363] hover:bg-[rgba(17,39,227,0.2)] hover:text-[#1127E3] p-4 my-2 rounded-xl"
+            :class="{'!text-[#1127E3] bg-[rgba(17,39,227,0.2)]': $route.path === menu.link}"
+            @click="handleChangeMenu(item.group, menu.link)"
+          >
+            <img
+              :src="$route.path === menu.link ? menu.iconActive : menu.icon"
+              alt="sidebar-icon"
+              loading="lazy"
+            >
+            <span class="block md:hidden lg:block">{{ menu.name }}</span>
+          </button>
+        </li>
+        <div 
+          class="h-[0.5px] w-full bg-[#ECECEC]" 
+          :class="{
+            'my-3': idx !== menus.length - 1
+          }"
+        />
+      </ul>
+      
+      <button class="md:absolute bottom-5 flex gap-x-2 p-4 text-base text-[#FF4014]">
+        <img
+          src="/img/icons/sidebar-logout.svg"
+          alt="logout-icon"
+        >
+        <span class="block md:hidden lg:block">Logout</span>
+      </button>
+    </div>
   </MiscCardBase>
 </template>
 <script>
 export default {
   data() {
     return {
+      showMenu: false,
+      activeMenu: {
+        group: 'Dashboard',
+        link: '/dashboard/my-tickets'
+      },
       menus: [
         {
           group: 'Dashboard',
@@ -92,7 +124,27 @@ export default {
     }
   },
   computed: {
+    CheckActiveMenu() {
+      return this.menus.find(item => item.group === this.activeMenu.group).items.find(item => item.link === this.activeMenu.link)
+    }
+  },
+  mounted() {
+    const parent = this.menus.find(item => item.items.find(item => item.link === this.$route.path))
+    const activeChild = parent.items.find(item => item.link === this.$route.path)
 
+    this.activeMenu = {
+      group: parent.group,
+      link: activeChild.link
+    }
+  },
+  methods: {
+    handleChangeMenu(group, link) {
+      this.$router.push(link)
+      this.activeMenu = {
+        group,
+        link
+      }
+    }
   }
 }
 </script>
