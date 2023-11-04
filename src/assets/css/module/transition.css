@@ -12,12 +12,15 @@
 .slideZoomOut,
 .slideZoomIn {
   transform: scaleY(0);
+  height: auto;
+  max-height: 0;
   transform-origin: top;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .slideZoomIn {
   transform: scaleY(1);
+  max-height: 100vh;
 }
 
 /* Slide to bottom */
