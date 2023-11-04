@@ -13,6 +13,20 @@ export default {
     layout () {
       return this.$route.meta.layout || defaultLayout
     }
+  },
+  created() {
+    window.addEventListener('resize', this.onResize)
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.onResize)
+  },
+  methods: {
+    onResize () {
+      this.$store.root.$patch({
+        isMobile: window.innerWidth <= 760,
+        isTablet: window.innerWidth <= 1024,
+      })
+    },
   }
 }
 </script>
