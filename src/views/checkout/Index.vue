@@ -1,8 +1,26 @@
 <template>
   <div class="container mx-auto px-10 lg:px-20 mt-10 mb-20">
-    <StepDetailOrder v-if="getCurrentStep === 1" />
-    <StepPayment v-if="getCurrentStep === 2" />
-    <StepTicket v-if="getCurrentStep === getTotalStep" />
+    <StepDetailOrder 
+      class="ransition duration-300"
+      :class="{
+        'slide-left': getCurrentStep !== 1,
+        'slide-right': getCurrentStep === 1
+      }"
+    />
+    <StepPayment 
+      class="ransition duration-300"
+      :class="{
+        'slide-left': getCurrentStep !== 2,
+        'slide-right': getCurrentStep === 2
+      }"
+    />
+    <StepTicket 
+      class="ransition duration-300"
+      :class="{
+        'slide-left': getCurrentStep !== 3,
+        'slide-right': getCurrentStep === 3
+      }"
+    />
   </div>
 </template>
 
