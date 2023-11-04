@@ -1,0 +1,42 @@
+.slide-right {
+  transform: translate(0%, 0);
+}
+.slide-left {
+  transform: translate(-200%, 0);
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* slide scale */
+.slideZoomOut,
+.slideZoomIn {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slideZoomIn {
+  transform: scaleY(1);
+}
+
+/* Slide to bottom */
+.slide-to-bottom-enter-active .inner,
+.slide-to-bottom-leave-active .inner {
+  transition: all 0.3s ease-out;
+}
+
+.slide-to-bottom-enter-from .inner,
+.slide-to-bottom-leave-to .inner {
+  transform: translateY(-50px);
+}
+
+.slide-to-bottom-enter-active,
+.slide-to-bottom-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-to-bottom-enter-from,
+.slide-to-bottom-leave-to {
+  opacity: 0;
+}
