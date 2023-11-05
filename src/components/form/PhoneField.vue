@@ -19,6 +19,11 @@
             :id="id"
             name="dialCode"
             class="w-24 h-full border border-solid rounded-md"
+            :class="{
+              'bg-gray-200 cursor-no-allowed': disabled,
+              'cursor-default': readonly
+            }"
+            :disabled="disabled"
             @change="inputVal.code = $event.target.value"
           >
             <option
