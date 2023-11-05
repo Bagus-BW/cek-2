@@ -7,7 +7,9 @@
           <MainSidebar />
         </div>
         <div class="h-full col-span-7 md:col-span-6 lg:col-span-9">
-          <router-view />
+          <Transition name="route">
+            <router-view />
+          </Transition>
         </div>
       </div>
     </div>
