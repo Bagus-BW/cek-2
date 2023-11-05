@@ -25,14 +25,14 @@
       </div>
       <div class="flex flex-col gap-y-3 mt-3">
         <FormTextField 
-          v-bind="form.name"
+          v-model="form.name"
           required
           label="Nama Lengkap"
           placeholder="Ex. John Doe"
           class="w-full"
         />
         <FormTextField 
-          v-bind="form.dateOfBirth"
+          v-model="form.dateOfBirth"
           input-type="date"
           required
           label="Tanggal Lahir"
@@ -40,7 +40,7 @@
           class="w-full"
         />
         <FormTextField 
-          v-bind="form.dateOfBirth"
+          v-model="form.dateOfBirth"
           input-type="number"
           required
           label="Nomor Identitas"
@@ -56,12 +56,11 @@
       </div>
       <div class="flex flex-col gap-y-3 mt-2">
         <FormPhoneField 
-          v-bind="field"
           v-model="dialPhone"
           label="Nomor handphone"
         />
         <FormTextField 
-          v-bind="form.email"
+          v-model="form.email"
           required
           label="Email"
           placeholder="Ex : john@mail.com"
