@@ -94,6 +94,7 @@
                     v-bind="field"
                     v-model="dialPhone"
                     label="Nomor handphone"
+                    placeholder="Ex. 8219123123"
                     :error="errors.phone"
                   />
                 </VeeField>
@@ -121,6 +122,7 @@
               text="Masuk"
               class="w-full mt-5 h-[45px] !rounded-xl"
               :disabled="!meta.valid"
+              @click-handle="() => $router.push('/verification')"
             />
           </VeeForm>
           <p class="text-sm text-[#636363] text-center mt-5">
