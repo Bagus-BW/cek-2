@@ -18,7 +18,7 @@
       <div class="h-1 w-[80%] border-t" />
     </div>
     <routerLink
-      to=""
+      to="/dashboard/my-tickets"
       class="flex gap-x-3 px-6 py-4 dynamic-hover rounded-b-[20px]"
       @mouseover="focus = true"
       @mouseleave="focus = false"
