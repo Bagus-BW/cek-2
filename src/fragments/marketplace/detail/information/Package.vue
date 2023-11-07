@@ -172,6 +172,7 @@
           <MiscButton
             text="Pesan Tiket"
             class="mt-5 !rounded-xl"
+            @click-handle="() => $router.push('/checkout')"
           />
         </div>
       </div>
