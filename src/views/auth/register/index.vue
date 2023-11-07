@@ -94,6 +94,7 @@
                     v-bind="field"
                     v-model="dialPhone"
                     label="Nomor handphone"
+                    placeholder="Ex. 8219123123"
                     :error="errors.phone"
                   />
                 </VeeField>

@@ -60,6 +60,7 @@
           v-model="dialPhone"
           :disabled="!edited"
           label="Nomor handphone"
+          placeholder="Ex. 8219123123"
         />
         <FormTextField 
           v-model="form.email"
