@@ -10,8 +10,8 @@
         </h1>
       </div>
       <router-link
-        to=""
-        class="text-[#1127E3]"
+        to="/marketplace"
+        class="text-[#1127E3] transition-all duration-300 hover:brightness-200"
       >
         <div class="flex gap-x-2">
           <span>Lihat Lainnya</span> 
