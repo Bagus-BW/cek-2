@@ -42,16 +42,36 @@
         class="hidden md:flex gap-x-5"
       >
         <li>
-          <routerLink to="/marketplace">Marketplace</routerLink>
+          <routerLink
+            to="/marketplace"
+            class="hover:text-[#1127E3]"
+          >
+            Marketplace
+          </routerLink>
         </li>
         <li>
-          <routerLink to="/">Discover</routerLink>
+          <routerLink
+            to="/"
+            class="hover:text-[#1127E3]"
+          >
+            Discover
+          </routerLink>
         </li>
         <li>
-          <routerLink to="/">Travel agency</routerLink>
+          <routerLink
+            to="/"
+            class="hover:text-[#1127E3]"
+          >
+            Travel agency
+          </routerLink>
         </li>
         <li>
-          <routerLink to="/">Pick for me</routerLink>
+          <routerLink
+            to="/"
+            class="hover:text-[#1127E3]"
+          >
+            Pick for me
+          </routerLink>
         </li>
       </ul>
 
