@@ -1,5 +1,8 @@
 <template>
-  <router-link to="/">
+  <router-link
+    to="/marketplace/1"
+    class="transition-all duration-300 hover:scale-[1.03]"
+  >
     <MiscCardBase class="w-full p-5 space-y-3">
       <div class="relative">
         <img
@@ -9,8 +12,14 @@
           class="aspect-square w-full md:w-[245px] rounded-[20px]"
         >
         <!-- Like Action -->
-        <button class="absolute top-3 right-3 bg-white p-2 rounded-full">
-          <SvgLove />
+        <button 
+          class="absolute top-3 right-3 bg-white p-2 rounded-full"
+          @click="handlelike($event)"
+        >
+          <SvgLove
+            :color="isLiked ? '#FF4014' : '#121212'"
+            :border-only="isLiked"
+          />
         </button>
         <!-- Rate Information -->
         <div class="absolute bottom-3 right-3 bg-white rounded-full">
@@ -58,7 +67,7 @@
             <span class="text-[9px] text-white">{{ discount }}% off</span>
           </div>
         </div>
-        <span class="text-xl font-extrabold leading-loose">{{ totalPriceAfterDiscount }}</span>
+        <span class="text-xl font-extrabold leading-loose">{{ totalPriceAfterDiscount }} {{ id }}</span>
       </div>
     </MiscCardBase>
   </router-link>
@@ -66,6 +75,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: Number,
+      default: 1,
+    },
     title: {
       type: String,
       default: 'Open Trip Labuan Bajo',
@@ -97,6 +110,12 @@ export default {
     provider: {
       type: String,
       default: 'Trivus',
+    },
+  },
+  emits: ['like'],
+  data() {
+    return {
+      isLiked: false,
     }
   },
   computed: {
@@ -104,6 +123,12 @@ export default {
       return this.price - (this.price * this.discount) / 100
     },
   },
+  methods: {
+    handlelike(event) {
+      event.preventDefault()
+      this.isLiked = !this.isLiked
+    }
+  }
 }
 </script>
 <style>
