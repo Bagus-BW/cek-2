@@ -41,7 +41,7 @@
         <input
           :id="id"
           v-model="inputVal"
-          class="disabled:border-spacecadet-20 w-full text-sm text-spacecadet-80 border-0 border-solid px-2 pr-3 py-[12px] placeholder-spacecadet-20 rounded-md"
+          class="w-full text-sm text-spacecadet-80 border-0 border-solid px-2 pr-3 py-[12px]  placeholder-spacecadet-20 rounded-md focus:right-1 focus:outline disabled:border-spacecadet-20"
           :class="[
             inputClass,
             {

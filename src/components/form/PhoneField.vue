@@ -18,7 +18,7 @@
           <select
             :id="id"
             name="dialCode"
-            class="w-24 h-full border border-solid rounded-md"
+            class="w-24 h-full border border-solid rounded-md focus:right-1 focus:outline"
             :class="{
               'bg-gray-200 cursor-no-allowed': disabled,
               'cursor-default': readonly
@@ -55,7 +55,7 @@
               <input
                 :id="id"
                 v-model="inputVal.number"
-                class="disabled:border-spacecadet-20 w-full text-sm text-spacecadet-80 border-0 border-solid px-2 pr-3 py-[12px] placeholder-spacecadet-20 rounded-md"
+                class="disabled:border-spacecadet-20 w-full text-sm text-spacecadet-80 border-0 border-solid px-2 pr-3 py-[12px] placeholder-spacecadet-20 rounded-md focus:right-1 focus:outline"
                 :class="{
                   'bg-gray-200 cursor-no-allowed': disabled,
                   'cursor-default': readonly
