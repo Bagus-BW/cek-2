@@ -69,9 +69,9 @@
 
         <!-- Divider -->
         <div class="flex justify-center items-center gap-x-3 text-[#B6B6B6] my-10">
-          <div class="w-full h-[0.5px] bg-[#B6B6B6]" />
-          <span class="w-[508px]">atau masuk dengan</span>
-          <div class="w-full h-[0.5px] bg-[#B6B6B6]" />
+          <div class="flex-1 h-[0.5px] bg-[#B6B6B6]" />
+          <span class="w-fit">atau masuk dengan</span>
+          <div class="flex-1 h-[0.5px] bg-[#B6B6B6]" />
         </div>
 
         <!-- Form -->
