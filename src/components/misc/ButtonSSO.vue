@@ -1,5 +1,5 @@
 <template>
-  <button class="flex items-center bg-white border-2 gap-x-4 px-5 py-3">
+  <button class="flex items-center bg-white border-2 gap-x-4 px-5 py-3 transition-all duration-300 dynamic-hover">
     <img
       :src="iconUrl"
       alt="icon"
@@ -29,4 +29,9 @@
     },
   };
 </script>
+<style scoped>
+  .dynamic-hover:hover {
+    background-color: rgba(17, 39, 227, 0.1);
+  }
+</style>
     
