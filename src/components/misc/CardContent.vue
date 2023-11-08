@@ -14,6 +14,9 @@
         <!-- Like Action -->
         <button 
           class="absolute top-3 right-3 bg-white p-2 rounded-full"
+          :class="{
+            'bg-[#FFECE8]': isLiked,
+          }"
           @click="handlelike($event)"
         >
           <SvgLove
