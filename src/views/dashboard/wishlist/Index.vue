@@ -9,22 +9,22 @@
         class="grid grid-cols-12 gap-5 mt-5 mb-10"
       >
         <div class="col-span-12 md:col-span-6 lg:col-span-4 border rounded-[20px] ">
-          <MiscCardContent />
+          <MiscCardContent like />
         </div>
         <div class="col-span-12 md:col-span-6 lg:col-span-4 border rounded-[20px] ">
-          <MiscCardContent />
+          <MiscCardContent like />
         </div>
         <div class="col-span-12 md:col-span-6 lg:col-span-4 border rounded-[20px] ">
-          <MiscCardContent />
+          <MiscCardContent like />
         </div>
         <div class="col-span-12 md:col-span-6 lg:col-span-4 border rounded-[20px] ">
-          <MiscCardContent />
+          <MiscCardContent like />
         </div>
         <div class="col-span-12 md:col-span-6 lg:col-span-4 border rounded-[20px] ">
-          <MiscCardContent />
+          <MiscCardContent like />
         </div>
         <div class="col-span-12 md:col-span-6 lg:col-span-4 border rounded-[20px] ">
-          <MiscCardContent />
+          <MiscCardContent like />
         </div>
       </div>
       <div

@@ -111,6 +111,10 @@ export default {
       type: String,
       default: 'Trivus',
     },
+    like: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ['like'],
   data() {
@@ -122,6 +126,14 @@ export default {
     totalPriceAfterDiscount() {
       return this.price - (this.price * this.discount) / 100
     },
+  },
+  watch: {
+    like: {
+      handler(newval) {
+        this.isLiked = newval
+      },
+      immediate: true,
+    }
   },
   methods: {
     handlelike(event) {
