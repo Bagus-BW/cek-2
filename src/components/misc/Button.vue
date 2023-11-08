@@ -1,13 +1,17 @@
 <template>
   <button
-    class="flex items-center justify-center gap-x-4"
+    class="flex items-center justify-center gap-x-4 transition-all duration-300"
     :style="buttonVars"
     :class="{
       'border-2': borderOnly,
       '!cursor-not-allowed': disabled,
+      'dynamic-hover': !disabled && hover && !borderOnly,
+      'dynamic-hover-border': !disabled && hover && borderOnly,
     }"
     :disabled="disabled"
     @click.prevent="$emit('clickHandle')"
+    @mouseenter="hover = true"
+    @mouseleave="hover = false"
   >
     <span
       class="flex gap-x-2 text-md capitalize font-semibold"
@@ -33,6 +37,12 @@
         type: String,
         default: function () {
           return '#1127E3';
+        },
+      },
+      backgroundColorRgb: {
+        type: String,
+        default: function () {
+          return '17, 39, 227';
         },
       },
       textColor: {
@@ -61,6 +71,11 @@
       },
     },
     emits: ['clickHandle'],
+    data() {
+      return {
+        hover: false,
+      };
+    },
     computed: {
       buttonVars() {
         if(this.disabled){
@@ -99,6 +114,12 @@
   }
   span {
     color: var(--text-color);
+  }
+  .dynamic-hover:hover {
+    @apply brightness-200;
+  }
+  .dynamic-hover-border:hover {
+    background-color: rgba(v-bind(backgroundColorRgb), 0.1);
   }
 </style>
   

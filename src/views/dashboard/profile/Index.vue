@@ -25,6 +25,7 @@
           <MiscButton
             text="Hapus"
             background-color="#FF4014"
+            background-color-rgb="255, 64, 20"
             border-only
             class="w-full md:w-fit h-10"
           />
